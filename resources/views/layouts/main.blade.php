@@ -74,7 +74,7 @@
               #main-header { padding: 1rem 1.5rem !important; }
           }
           @media (min-width: 1024px) {
-              .desktop-nav-only { display: flex !important; }
+              .desktop-nav-only { display: flex !important; gap: 1.5rem; }
               .mobile-btn-only { display: none !important; }
           }
           .nav-link {

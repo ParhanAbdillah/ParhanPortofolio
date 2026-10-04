@@ -4,44 +4,54 @@
 <section class="bg-gray-100 items-center min-h-screen w-full relative" id="Home">
     <div class="w-full h-full absolute inset-0" id="particles-js"></div>
     <div class="pl-7 md:pl-32 pr-7 relative z-10" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 80vh;">
-    <div class="pt-20 md:pt-32" style="flex: 1; min-width: 300px;">
-        <h1 class="font-bold text-[55px]">{{ $profile?->hero_title ?? 'Halo Saya' }}</h1>
-        <div class="font-semibold text-[60px] font-serif text-black mt-1 leading-tight">
-        <h1>Muhamad <span class="text-blue-800">Parhan</span> A</h1>
+    <div class="pt-24 md:pt-32 hero-text-container" style="flex: 1; min-width: 300px;">
+        <style>
+            @media (max-width: 768px) {
+                .hero-text-container { padding-top: 130px !important; }
+                .hero-title-main { font-size: 34px !important; line-height: 1.2 !important; }
+                .hero-name-main { font-size: 55px !important; line-height: 1.05 !important; margin-top: 5px !important; }
+                .hero-role-main { font-size: 20px !important; line-height: 1.3 !important; }
+                .hero-btns-container { flex-direction: row !important; flex-wrap: wrap !important; gap: 0.5rem !important; justify-content: flex-start !important; }
+                .hero-btn { padding: 0.5rem 1rem !important; font-size: 0.8rem !important; flex: 0 0 auto !important; width: auto !important; }
+            }
+        </style>
+        <h1 class="font-bold text-[55px] hero-title-main">{{ $profile?->hero_title ?? 'Halo Saya' }}</h1>
+        <div class="font-semibold text-[60px] font-serif text-black mt-1 leading-tight hero-name-main">
+            Muhamad <span class="text-blue-800">Parhan</span> A
         </div>
-        <p class="font-semibold text-black mt-2 text-3xl" data-aos="fade-down"
+        <p class="font-semibold text-black mt-2 text-3xl hero-role-main" data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1500">
-        And I'm a, <span class="input text-red-700 font-semibold"></span>
+        And I'm a <span class="input text-red-700 font-semibold"></span>
         </p>
 
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; margin-bottom: 2rem;" data-aos="fade-down" data-aos-duration="1200">
-        <a href="/about" class="btn-navigate" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background-color: #2563eb; color: white; font-weight: 600; font-size: 1.1rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#1d4ed8'; this.style.boxShadow='0 15px 20px -5px rgba(37, 99, 235, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='#2563eb'; this.style.boxShadow='0 10px 15px -3px rgba(37, 99, 235, 0.3)';">
-            Tentang Saya <i class="fi fi-ss-arrow-circle-down" style="margin-top: 2px;"></i>
-        </a>
-        
-        <a href="/project" class="btn-navigate" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background-color: white; color: #2563eb; border: 2px solid #2563eb; font-weight: 600; font-size: 1.1rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#eff6ff'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='white'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.05)';">
-            Lihat Proyek <i class="fi fi-rs-laptop-code" style="margin-top: 2px;"></i>
-        </a>
+        <div class="flex flex-row flex-wrap gap-4 mt-10 mb-8 hero-btns-container" data-aos="fade-down" data-aos-duration="1200">
+            <a href="/about" class="hero-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background-color: #2563eb; color: white; font-weight: 600; font-size: 1rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#1d4ed8'; this.style.boxShadow='0 15px 20px -5px rgba(37, 99, 235, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='#2563eb'; this.style.boxShadow='0 10px 15px -3px rgba(37, 99, 235, 0.3)';">
+                Tentang Saya <i class="fi fi-ss-arrow-circle-down" style="margin-top: 2px;"></i>
+            </a>
+            
+            <a href="/project" class="hero-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background-color: white; color: #2563eb; border: 2px solid #2563eb; font-weight: 600; font-size: 1rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#eff6ff'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='white'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.05)';">
+                Lihat Proyek <i class="fi fi-rs-laptop-code" style="margin-top: 2px;"></i>
+            </a>
 
-        <a href="{{ $profile?->cv_file ? asset('storage/' . $profile->cv_file) : '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background-color: #111827; color: white; border: 2px solid #111827; font-weight: 600; font-size: 1.1rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#000'; this.style.boxShadow='0 15px 20px -5px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='#111827'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.2)';">
-            Buka CV <i class="fi fi-ss-document" style="margin-top: 2px;"></i>
-        </a>
+            <a href="{{ $profile?->cv_file ? asset('storage/' . $profile->cv_file) : '#' }}" target="_blank" class="hero-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background-color: #111827; color: white; border: 2px solid #111827; font-weight: 600; font-size: 1rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#000'; this.style.boxShadow='0 15px 20px -5px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='#111827'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.2)';">
+                Buka CV <i class="fi fi-ss-document" style="margin-top: 2px;"></i>
+            </a>
         </div>
 
         <div style="display: flex; gap: 1rem; margin-top: 1rem;" data-aos="fade-down" data-aos-duration="1300">
-        <a href="{{ $profile?->social_wa ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
-            <i class="fi fi-brands-whatsapp" style="margin-top: 2px;"></i>
-        </a>
-        <a href="{{ $profile?->social_ig ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
-            <i class="fi-brands-instagram" style="margin-top: 2px;"></i>
-        </a>
-        <a href="{{ $profile?->social_tiktok ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
-            <i class="fi fi-brands-tik-tok" style="margin-top: 2px;"></i>
-        </a>
-        <a href="{{ $profile?->social_github ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
-            <i class="fi fi-brands-github" style="margin-top: 2px;"></i>
-        </a>
+            <a href="{{ $profile?->social_wa ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
+                <i class="fi fi-brands-whatsapp" style="margin-top: 2px;"></i>
+            </a>
+            <a href="{{ $profile?->social_ig ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
+                <i class="fi-brands-instagram" style="margin-top: 2px;"></i>
+            </a>
+            <a href="{{ $profile?->social_tiktok ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
+                <i class="fi fi-brands-tik-tok" style="margin-top: 2px;"></i>
+            </a>
+            <a href="{{ $profile?->social_github ?? '#' }}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background-color: #111827; color: #60a5fa; border-radius: 50%; text-decoration: none; transition: all 0.3s; font-size: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.backgroundColor='#2563eb'; this.style.color='white'; this.style.transform='translateY(-4px) scale(1.1)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.4)';" onmouseout="this.style.backgroundColor='#111827'; this.style.color='#60a5fa'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';">
+                <i class="fi fi-brands-github" style="margin-top: 2px;"></i>
+            </a>
         </div>
     </div>
 
