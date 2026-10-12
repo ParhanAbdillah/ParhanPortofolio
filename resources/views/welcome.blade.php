@@ -807,7 +807,7 @@
 
                         <!-- Image Box -->
                         <div class="bg-black border border-gray-200 mb-10 flex justify-center items-center w-full overflow-hidden relative">
-                            <img id="project-image" src="{{ $mainProject->image_path ? asset('storage/' . $mainProject->image_path) : asset('img/presensi.png') }}" alt="Project Image" class="w-full object-cover" style="display: block;">
+                            <img id="project-image" src="{{ $mainProject && $mainProject->image_path ? asset('storage/' . $mainProject->image_path) : asset('img/presensi.png') }}" alt="Project Image" class="w-full object-cover" style="display: block;" onerror="this.onerror=null; this.src='{{ asset('img/presensi.png') }}';">
                         </div>
 
                         <!-- Description -->

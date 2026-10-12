@@ -59,8 +59,8 @@
                                 </div>
                                 <div class="image-outer-box">
                                     <div class="image-stack-wrapper">
-                                        <div class="image-box" style="cursor: pointer;" onclick="openLightbox('{{ $project->image_path ? asset('storage/' . $project->image_path) : asset('img/presensi.png') }}', '{{ addslashes($project->title) }}')">
-                                            <img src="{{ $project->image_path ? asset('storage/' . $project->image_path) : asset('img/presensi.png') }}" alt="{{ $project->title }}">
+                                        <div class="image-box" style="cursor: pointer;" onclick="openLightbox('{{ $project->image_url }}', '{{ addslashes($project->title) }}')">
+                                            <img src="{{ $project->image_url }}" alt="{{ $project->title }}" onerror="this.onerror=null; this.src='{{ asset('img/presensi.png') }}';">
                                             <div class="image-overlay-btn">
                                                 MEMBUKA &nearr;
                                             </div>
@@ -296,9 +296,9 @@
         .image-stack-wrapper::after { transform: translate(8px, 8px); background: #f3f4f6; z-index: -2; }
         .image-stack-wrapper:hover::before { transform: translate(6px, 6px); }
         .image-stack-wrapper:hover::after { transform: translate(12px, 12px); }
-        .image-box { position: relative; border: 3px solid #111; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; }
-        .image-box img { width: 100%; height: auto; object-fit: contain; display: block; opacity: 0.9; transition: opacity 0.3s; }
-        .image-box:hover img { opacity: 1; }
+        .image-box { position: relative; border: 3px solid #111; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; min-height: 200px; width: 100%; }
+        .image-box img { width: 100%; height: auto; min-height: 180px; max-height: 260px; object-fit: contain; display: block; opacity: 0.92; transition: opacity 0.3s, transform 0.3s; }
+        .image-box:hover img { opacity: 1; transform: scale(1.02); }
         .image-overlay-btn {
             position: absolute; top: 0.75rem; right: 0.75rem;
             background: #111; color: #fff;

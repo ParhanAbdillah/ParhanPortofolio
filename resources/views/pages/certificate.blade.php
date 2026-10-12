@@ -316,12 +316,12 @@
                             <div class="cert-card-top">
                                 <span>{{ $cert->code ?? 'CERT-01' }}</span>
                                 @if($cert->file_path)
-                                <a href="{{ asset('storage/' . $cert->file_path) }}" target="_blank" style="color: inherit; text-decoration: none;">PRATINJAU PDF <i class="fi fi-rs-document"></i></a>
+                                <a href="{{ $cert->file_url }}" target="_blank" style="color: inherit; text-decoration: none;">PRATINJAU PDF <i class="fi fi-rs-document"></i></a>
                                 @endif
                             </div>
                             <div class="cert-card-content">
-                                <div class="cert-img-box" onclick="openLightbox('{{ $cert->image_path ? asset('storage/' . $cert->image_path) : 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%221100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%201100%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22800%22%20height%3D%221100%22%20fill%3D%22%23eeeeee%22%20%2F%3E%3Ctext%20x%3D%22400%22%20y%3D%22550%22%20font-family%3D%22monospace%22%20font-size%3D%2260%22%20fill%3D%22%23aaaaaa%22%20text-anchor%3D%22middle%22%20alignment-baseline%3D%22middle%22%3EDOCUMENT%3C%2Ftext%3E%3C%2Fsvg%3E' }}', '{{ addslashes($cert->name) }}')">
-                                    <img src="{{ $cert->image_path ? asset('storage/' . $cert->image_path) : 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%221100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%201100%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22800%22%20height%3D%221100%22%20fill%3D%22%23eeeeee%22%20%2F%3E%3Ctext%20x%3D%22400%22%20y%3D%22550%22%20font-family%3D%22monospace%22%20font-size%3D%2260%22%20fill%3D%22%23aaaaaa%22%20text-anchor%3D%22middle%22%20alignment-baseline%3D%22middle%22%3EDOCUMENT%3C%2Ftext%3E%3C%2Fsvg%3E' }}" alt="{{ $cert->name }}">
+                                <div class="cert-img-box" onclick="openLightbox('{{ $cert->image_url }}', '{{ addslashes($cert->name) }}')">
+                                    <img src="{{ $cert->image_url }}" alt="{{ $cert->name }}" onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%221100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%201100%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22800%22%20height%3D%221100%22%20fill%3D%22%23eeeeee%22%20%2F%3E%3Ctext%20x%3D%22400%22%20y%3D%22550%22%20font-family%3D%22monospace%22%20font-size%3D%2260%22%20fill%3D%22%23aaaaaa%22%20text-anchor%3D%22middle%22%20alignment-baseline%3D%22middle%22%3EDOCUMENT%3C%2Ftext%3E%3C%2Fsvg%3E';">
                                 </div>
                                 <div class="cert-info">
                                     <div class="cert-cat">{{ $cert->category }}</div>

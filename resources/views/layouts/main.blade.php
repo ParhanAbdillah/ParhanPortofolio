@@ -1,9 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofoio | Parhan</title>
+    <title>@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')" />
+    <meta name="description" content="@yield('meta_description', 'Muhamad Parhan Abdillah - Full-Stack Web Developer & Jasa Pembuatan Website Profesional di Indonesia. Melayani pembuatan landing page, company profile, aplikasi web, sistem informasi sekolah & toko online berkualitas tinggi, cepat, responsif, dan SEO friendly.')" />
+    <meta name="keywords" content="parhan portofolio, parhan abdillah, muhamad parhan, jasa website, jasa pembuatan website, jasa bikin website, jasa web developer, jasa website murah profesional, web developer indonesia, fullstack developer, laravel developer, jasa landing page, jasa web company profile, pembuatan web sekolah, aplikasi web" />
+    <meta name="author" content="Muhamad Parhan Abdillah" />
+    <meta name="publisher" content="Muhamad Parhan Abdillah" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="geo.region" content="ID" />
+    <meta name="geo.country" content="Indonesia" />
+    <meta name="geo.placename" content="Indonesia" />
+    <link rel="canonical" href="{{ url()->current() }}" />
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')" />
+    <meta property="og:description" content="@yield('meta_description', 'Penyedia Jasa Pembuatan Website Profesional & Portofolio Web Developer: Landing Page, Company Profile, Sistem Informasi & Web App.')" />
+    <meta property="og:image" content="{{ asset('images/foto_parhan.jpg') }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Muhamad Parhan Abdillah - Web Developer & Jasa Pembuatan Website" />
+    <meta property="og:site_name" content="Parhan Abdillah" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ url()->current() }}" />
+    <meta name="twitter:title" content="@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')" />
+    <meta name="twitter:description" content="@yield('meta_description', 'Penyedia Jasa Pembuatan Website Profesional & Portofolio Web Developer: Landing Page, Company Profile, Sistem Informasi & Web App.')" />
+    <meta name="twitter:image" content="{{ asset('images/foto_parhan.jpg') }}" />
+
+    <!-- GEO / Generative Engine Optimization JSON-LD Schema for Google AI Overviews & AI Search -->
+    <script type="application/ld+json">
+    {!! json_encode([
+      '@context' => 'https://schema.org',
+      '@graph' => [
+        [
+          '@type' => 'Person',
+          '@id' => url('/') . '#person',
+          'name' => 'Muhamad Parhan Abdillah',
+          'alternateName' => ['Parhan', 'Parhan Abdillah', 'Parhan Portofolio'],
+          'url' => url('/'),
+          'image' => asset('images/foto_parhan.jpg'),
+          'jobTitle' => 'Full-Stack Web Developer & Konsultan IT',
+          'description' => 'Pengembang web profesional dan penyedia jasa pembuatan website berbasis Laravel, PHP, JavaScript, dan Tailwind CSS.',
+          'knowsAbout' => [
+            'Web Development',
+            'Jasa Pembuatan Website',
+            'Jasa Website',
+            'Laravel',
+            'PHP',
+            'JavaScript',
+            'Tailwind CSS',
+            'MySQL',
+            'Landing Page',
+            'Company Profile',
+            'Sistem Informasi Manajemen'
+          ]
+        ],
+        [
+          '@type' => 'WebSite',
+          '@id' => url('/') . '#website',
+          'url' => url('/'),
+          'name' => 'Parhan Abdillah - Portofolio & Jasa Pembuatan Website',
+          'description' => 'Website resmi portofolio Muhamad Parhan Abdillah dan Layanan Jasa Pembuatan Website Profesional.',
+          'publisher' => [
+            '@id' => url('/') . '#person'
+          ],
+          'inLanguage' => 'id-ID'
+        ],
+        [
+          '@type' => 'ProfessionalService',
+          '@id' => url('/') . '#service',
+          'name' => 'Jasa Pembuatan Website Parhan Abdillah',
+          'url' => url('/'),
+          'image' => asset('images/foto_parhan.jpg'),
+          'description' => 'Layanan jasa pembuatan website profesional, cepat, responsif dan SEO friendly. Melayani website company profile, landing page, sistem informasi sekolah, toko online, dan aplikasi web custom.',
+          'priceRange' => '$$',
+          'areaServed' => [
+            '@type' => 'Country',
+            'name' => 'Indonesia'
+          ],
+          'provider' => [
+            '@id' => url('/') . '#person'
+          ],
+          'hasOfferCatalog' => [
+            '@type' => 'OfferCatalog',
+            'name' => 'Layanan Jasa Pembuatan Website',
+            'itemListElement' => [
+              [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                  '@type' => 'Service',
+                  'name' => 'Jasa Pembuatan Website Company Profile',
+                  'description' => 'Website profil perusahaan dan bisnis profesional untuk meningkatkan branding dan kepercayaan klien.'
+                ]
+              ],
+              [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                  '@type' => 'Service',
+                  'name' => 'Jasa Pembuatan Landing Page',
+                  'description' => 'Halaman landing page promosi dan penjualan dengan tingkat konversi tinggi dan tampilan modern.'
+                ]
+              ],
+              [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                  '@type' => 'Service',
+                  'name' => 'Jasa Pembuatan Sistem Informasi & Web App',
+                  'description' => 'Aplikasi berbasis web kustom seperti SIAKAD sekolah, POS kasir, sistem absensi, dan inventaris.'
+                ]
+              ],
+              [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                  '@type' => 'Service',
+                  'name' => 'Jasa Maintenance & Optimasi SEO Website',
+                  'description' => 'Optimasi kecepatan website, perbaikan bug, dan optimasi SEO agar website berada di halaman pertama Google.'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+
+
     <link rel="stylesheet" href="{{ asset('output.css') }}" />
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -157,6 +289,7 @@
       <!-- Desktop Navigation -->
       <nav class="nav-container desktop-nav-only items-center gap-6 pr-4">
         <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
+        <a href="/#Services" class="nav-link">Layanan & Jasa</a>
         <a href="/about" class="nav-link {{ request()->is('about') ? 'active' : '' }}">Tentang</a>
         <a href="/skills" class="nav-link {{ request()->is('skills') ? 'active' : '' }}">Keahlian</a>
         <a href="/project" class="nav-link {{ request()->is('project') ? 'active' : '' }}">Proyek</a>
@@ -260,6 +393,7 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu">
         <a href="/" class="mobile-menu-link {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
+        <a href="/#Services" class="mobile-menu-link" onclick="toggleMobileMenu()">Layanan & Jasa Website</a>
         <a href="/about" class="mobile-menu-link {{ request()->is('about') ? 'active' : '' }}">Tentang</a>
         <a href="/skills" class="mobile-menu-link {{ request()->is('skills') ? 'active' : '' }}">Keahlian</a>
         <a href="/project" class="mobile-menu-link {{ request()->is('project') ? 'active' : '' }}">Proyek</a>

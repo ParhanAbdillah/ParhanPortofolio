@@ -169,6 +169,169 @@
     </div>
 </section>
 
+<!-- SECTION: Jasa Pembuatan Website Profesional & Layanan (Optimasi SEO & GEO) -->
+<section id="Services" class="py-20 px-6 md:px-20 bg-white border-t border-gray-200 relative z-20">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <span class="inline-block py-1 px-3 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 rounded-full mb-3">
+                Layanan & Jasa Pembuatan Website Profesional
+            </span>
+            <h2 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
+                Solusi Website Modern, Cepat & <span class="text-blue-600">Bergaransi</span>
+            </h2>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                Butuh website bisnis, landing page promosi, atau sistem informasi kustom? <strong>Parhan Abdillah</strong> menyediakan jasa pembuatan website berkualitas tinggi dengan teknologi modern (Laravel, Tailwind CSS, JavaScript) yang dioptimasi penuh untuk mesin pencari Google dan AI Search.
+            </p>
+        </div>
+
+        <!-- Service Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <!-- Card 1 -->
+            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 rounded-xl bg-blue-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+                    <i class="fi fi-rs-briefcase"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Company Profile</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Website profil perusahaan, instansi, atau UMKM yang elegan dan profesional untuk meningkatkan kredibilitas di mata klien & mitra.
+                </p>
+                <div class="text-xs font-semibold text-blue-600 flex items-center gap-1">
+                    Cocok untuk: Bisnis, CV/PT, Sekolah <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
+                    <i class="fi fi-rs-rocket-lunch"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Landing Page Konversi</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Halaman promosi produk dan jasa berkecepatan tinggi dengan copywriting persuasif dan integrasi tombol WhatsApp checkout langsung.
+                </p>
+                <div class="text-xs font-semibold text-indigo-600 flex items-center gap-1">
+                    Cocok untuk: Iklan Meta/Google Ads, Event <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                    <i class="fi fi-rs-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Web App & Sistem Info</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Sistem berbasis web kustom: SIAKAD akademik sekolah, aplikasi kasir (POS), sistem inventaris barang, dan absensi digital.
+                </p>
+                <div class="text-xs font-semibold text-emerald-600 flex items-center gap-1">
+                    Cocok untuk: Sekolah, Klinik, Toko <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-14 h-14 rounded-xl bg-amber-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
+                    <i class="fi fi-rs-settings"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Optimasi & Redesign</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Peremajaan website lama agar lebih modern, perbaikan bug, percepatan load time (PageSpeed), dan optimasi SEO On-Page mendalam.
+                </p>
+                <div class="text-xs font-semibold text-amber-600 flex items-center gap-1">
+                    Cocok untuk: Pemilik Website Lama <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keunggulan (Why Us) -->
+        <div class="bg-gradient-to-r from-gray-900 to-slate-900 text-white rounded-3xl p-8 md:p-12 mb-16 shadow-2xl" data-aos="fade-up">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="text-blue-400 font-bold uppercase text-xs tracking-wider">Mengapa Memilih Parhan Abdillah?</span>
+                    <h3 class="text-2xl md:text-4xl font-extrabold mt-2 mb-4 leading-tight">
+                        Kualitas Kode Terbaik, Tampilan Elegan & SEO Maksimal
+                    </h3>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+                        Setiap website yang dibangun dirancang dengan arsitektur standar industri, bebas bloatware, dan telah lulus uji responsif mobile di berbagai ukuran layar.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $profile?->social_wa ?? '6280000000000') }}?text=Halo%20Parhan,%20saya%20tertarik%20konsultasi%20jasa%20pembuatan%20website" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-600/30 hover:bg-blue-500 transition-all">
+                            <i class="fi fi-brands-whatsapp text-lg"></i> Konsultasi Jasa Website Gratis
+                        </a>
+                        <a href="/project" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 text-white font-bold text-sm border border-white/20 hover:bg-white/20 transition-all">
+                            Lihat Portofolio Proyek <i class="fi fi-rs-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
+                        <div class="text-blue-400 text-2xl font-black mb-1">100%</div>
+                        <div class="font-bold text-sm text-white mb-1">Mobile Responsive</div>
+                        <div class="text-xs text-gray-400">Tampilan sempurna di HP, tablet, maupun laptop.</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
+                        <div class="text-emerald-400 text-2xl font-black mb-1">Fast</div>
+                        <div class="font-bold text-sm text-white mb-1">Ultra Cepat</div>
+                        <div class="text-xs text-gray-400">Loading kencang tanpa lemot, ramah kuota pengguna.</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
+                        <div class="text-amber-400 text-2xl font-black mb-1">SEO</div>
+                        <div class="font-bold text-sm text-white mb-1">Google & AI Ready</div>
+                        <div class="text-xs text-gray-400">Metadata & schema lengkap agar cepat terindeks mesin pencari.</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
+                        <div class="text-indigo-400 text-2xl font-black mb-1">Support</div>
+                        <div class="font-bold text-sm text-white mb-1">Bimbingan & Garansi</div>
+                        <div class="text-xs text-gray-400">Bantuan setup domain, hosting, dan panduan penggunaan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section (Generative Engine Optimization Anchor) -->
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">FAQ Layanan</span>
+                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">Pertanyaan Seputar Jasa Website</h3>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-gray-50 border border-gray-200 rounded-xl p-5 open:bg-blue-50/40 open:border-blue-200 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
+                        <span>Berapa lama estimasi waktu pembuatan website?</span>
+                        <span class="transition group-open:rotate-180 text-blue-600"><i class="fi fi-rs-angle-small-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Untuk landing page biasanya membutuhkan waktu 2-4 hari kerja. Website company profile sekitar 5-10 hari kerja. Sementara sistem informasi atau web app kustom disesuaikan dengan kompleksitas modul (rata-rata 2-3 minggu).
+                    </p>
+                </details>
+
+                <details class="group bg-gray-50 border border-gray-200 rounded-xl p-5 open:bg-blue-50/40 open:border-blue-200 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
+                        <span>Apakah website yang dibuat sudah SEO friendly dan muncul di Google?</span>
+                        <summary-icon class="transition group-open:rotate-180 text-blue-600"><i class="fi fi-rs-angle-small-down"></i></summary-icon>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Tentu! Seluruh website kami dilengkapi dengan struktur OpenGraph, meta tags komprehensif, Google sitemap.xml, dan JSON-LD schema (Schema.org) sehingga mudah dikenali oleh mesin pencari Google dan bot AI.
+                    </p>
+                </details>
+
+                <details class="group bg-gray-50 border border-gray-200 rounded-xl p-5 open:bg-blue-50/40 open:border-blue-200 transition-colors">
+                    <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
+                        <span>Teknologi apa saja yang digunakan?</span>
+                        <summary-icon class="transition group-open:rotate-180 text-blue-600"><i class="fi fi-rs-angle-small-down"></i></summary-icon>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Kami menggunakan teknologi modern seperti PHP (Laravel), Tailwind CSS, JavaScript murni/Vue, MySQL, serta integrasi RESTful API untuk keandalan performa maksimal.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
 
 @push('scripts')

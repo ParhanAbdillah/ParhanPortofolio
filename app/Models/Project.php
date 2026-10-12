@@ -30,4 +30,25 @@ class Project extends Model
     protected $casts = [
         'tech_stack' => 'array',
     ];
+
+    /**
+     * Get the full URL to the project image with automatic fallbacks.
+     */
+    public function getImageUrlAttribute(): string
+    {
+        if (empty($this->image_path)) {
+            return asset('img/presensi.png');
+        }
+
+        if (str_starts_with($this->image_path, 'http://') || str_starts_with($this->image_path, 'https://')) {
+            return $this->image_path;
+        }
+
+        $cleanPath = ltrim($this->image_path, '/');
+        if (str_starts_with($cleanPath, 'storage/')) {
+            $cleanPath = substr($cleanPath, 8);
+        }
+
+        return asset('storage/'.$cleanPath);
+    }
 }
