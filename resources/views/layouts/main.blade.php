@@ -194,7 +194,7 @@
     <header id="main-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 10000; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 4px 20px -2px rgba(0,0,0,0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
       
       <div style="padding-left: 1rem;">
-        <a href="/admin" style="text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+        <a href="/" style="text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
             <h1 style="font-size: 1.5rem; font-weight: 800; font-family: 'Inter', system-ui, sans-serif; margin: 0; color: #1e293b; letter-spacing: -0.02em;">
               Parhan <span style="color: #2563eb;">Abdillah</span>
             </h1>
@@ -291,7 +291,6 @@
       <!-- Desktop Navigation -->
       <nav class="nav-container desktop-nav-only items-center gap-6 pr-4">
         <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
-        <a href="/#Services" class="nav-link">Layanan & Jasa</a>
         <a href="/about" class="nav-link {{ request()->is('about') ? 'active' : '' }}">Tentang</a>
         <a href="/skills" class="nav-link {{ request()->is('skills') ? 'active' : '' }}">Keahlian</a>
         <a href="/project" class="nav-link {{ request()->is('project') ? 'active' : '' }}">Proyek</a>
@@ -395,7 +394,6 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu">
         <a href="/" class="mobile-menu-link {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
-        <a href="/#Services" class="mobile-menu-link" onclick="toggleMobileMenu()">Layanan & Jasa Website</a>
         <a href="/about" class="mobile-menu-link {{ request()->is('about') ? 'active' : '' }}">Tentang</a>
         <a href="/skills" class="mobile-menu-link {{ request()->is('skills') ? 'active' : '' }}">Keahlian</a>
         <a href="/project" class="mobile-menu-link {{ request()->is('project') ? 'active' : '' }}">Proyek</a>
@@ -500,24 +498,9 @@
                 link.addEventListener('click', function(e) {
                     const targetUrl = this.getAttribute('href');
                     if (!targetUrl) return;
-
-                    // Handle internal page anchor like Layanan & Jasa (#Services)
-                    if (targetUrl.includes('#Services')) {
-                        const isHome = window.location.pathname === '/' || 
-                                       window.location.pathname.endsWith('/public') || 
-                                       window.location.pathname.endsWith('/public/');
-                        if (isHome) {
-                            e.preventDefault();
-                            const svcSection = document.getElementById('Services');
-                            if (svcSection) {
-                                svcSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
-                            return;
-                        }
-                    }
                     
                     // Don't animate if clicking current page or external link
-                    if (targetUrl === window.location.pathname || targetUrl.startsWith('http')) return;
+                    if (targetUrl === window.location.pathname || targetUrl.startsWith('http') || targetUrl.startsWith('#')) return;
                     
                     e.preventDefault(); 
                     
