@@ -129,3 +129,9 @@ Route::get('/sitemap.xml', function () {
 
     return response($xml, 200)->header('Content-Type', 'application/xml');
 });
+
+// Google Search Console Site Verification
+Route::get('/googleb43970c19ce985ff.html', function () {
+    return response('google-site-verification: googleb43970c19ce985ff.html', 200)
+        ->header('Content-Type', 'text/html');
+});
