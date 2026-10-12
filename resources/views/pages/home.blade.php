@@ -170,164 +170,433 @@
 </section>
 
 <!-- SECTION: Jasa Pembuatan Website Profesional & Layanan (Optimasi SEO & GEO) -->
-<section id="Services" class="py-20 px-6 md:px-20 bg-white border-t border-gray-200 relative z-20">
-    <div class="max-w-7xl mx-auto">
+<section id="Services" class="svc-section">
+    <style>
+        .svc-section {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 5rem 1.5rem;
+            position: relative;
+            z-index: 20;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            box-sizing: border-box;
+        }
+        .svc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .svc-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 3.5rem auto;
+        }
+        .svc-badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #1d4ed8;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
+        }
+        .svc-title {
+            font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+            font-weight: 900;
+            color: #0f172a;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+        .svc-title-highlight {
+            color: #2563eb;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .svc-desc {
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Grid 4 Cards */
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+        .svc-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 1.75rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+        .svc-card:hover {
+            transform: translateY(-6px);
+            border-color: #93c5fd;
+            box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 8px 10px -6px rgba(37, 99, 235, 0.05);
+        }
+        .svc-icon-box {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .svc-icon-blue { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+        .svc-icon-purple { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+        .svc-icon-emerald { background: linear-gradient(135deg, #059669, #047857); }
+        .svc-icon-amber { background: linear-gradient(135deg, #d97706, #b45309); }
+
+        .svc-card-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        .svc-card-text {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+        .svc-card-badge {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #2563eb;
+            background: #eff6ff;
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Dark Banner Keunggulan */
+        .svc-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 24px;
+            padding: 3rem;
+            color: #ffffff;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+            border: 1px solid #334155;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        @media(min-width: 992px) {
+            .svc-banner {
+                grid-template-columns: 1.1fr 0.9fr;
+            }
+        }
+        .svc-banner-tag {
+            color: #60a5fa;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .svc-banner-h3 {
+            font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+        .svc-banner-p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.75rem;
+        }
+        .svc-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .svc-btn-wa {
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+            transition: all 0.2s;
+        }
+        .svc-btn-wa:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .svc-btn-portfolio {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s;
+        }
+        .svc-btn-portfolio:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .svc-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .svc-stat-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 1.25rem;
+            backdrop-filter: blur(8px);
+        }
+        .svc-stat-val {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 0.25rem;
+        }
+        .svc-stat-lbl {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+        .svc-stat-sub {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        /* FAQ Accordion */
+        .svc-faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .svc-faq-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.25rem;
+            margin-bottom: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .svc-faq-item[open] {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+        }
+        .svc-faq-q {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.95rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .svc-faq-q::-webkit-details-marker { display: none; }
+        .svc-faq-a {
+            color: #475569;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed rgba(0, 0, 0, 0.08);
+        }
+    </style>
+
+    <div class="svc-container">
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <span class="inline-block py-1 px-3 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 rounded-full mb-3">
-                Layanan & Jasa Pembuatan Website Profesional
-            </span>
-            <h2 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
-                Solusi Website Modern, Cepat & <span class="text-blue-600">Bergaransi</span>
+        <div class="svc-header">
+            <span class="svc-badge">Layanan & Jasa Pembuatan Website</span>
+            <h2 class="svc-title">
+                Solusi Website Modern, Cepat & <span class="svc-title-highlight">Bergaransi</span>
             </h2>
-            <p class="text-gray-600 text-base md:text-lg leading-relaxed">
-                Butuh website bisnis, landing page promosi, atau sistem informasi kustom? <strong>Parhan Abdillah</strong> menyediakan jasa pembuatan website berkualitas tinggi dengan teknologi modern (Laravel, Tailwind CSS, JavaScript) yang dioptimasi penuh untuk mesin pencari Google dan AI Search.
+            <p class="svc-desc">
+                Butuh website bisnis, landing page promosi, atau sistem informasi kustom? <strong>Parhan Abdillah</strong> menyediakan jasa pembuatan website berkualitas tinggi dengan arsitektur modern (Laravel, Tailwind CSS, JavaScript) yang dioptimasi penuh untuk mesin pencari Google dan AI Search.
             </p>
         </div>
 
         <!-- Service Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="svc-grid">
             <!-- Card 1 -->
-            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 rounded-xl bg-blue-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+            <div class="svc-card">
+                <div class="svc-icon-box svc-icon-blue">
                     <i class="fi fi-rs-briefcase"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Company Profile</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                    Website profil perusahaan, instansi, atau UMKM yang elegan dan profesional untuk meningkatkan kredibilitas di mata klien & mitra.
+                <h3 class="svc-card-title">Company Profile</h3>
+                <p class="svc-card-text">
+                    Website profil perusahaan, instansi, atau UMKM yang elegan dan profesional untuk meningkatkan kredibilitas di mata klien & calon mitra bisnis.
                 </p>
-                <div class="text-xs font-semibold text-blue-600 flex items-center gap-1">
-                    Cocok untuk: Bisnis, CV/PT, Sekolah <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                <div>
+                    <span class="svc-card-badge">
+                        Cocok untuk: Bisnis, CV/PT, Sekolah <i class="fi fi-rs-arrow-right" style="font-size: 10px;"></i>
+                    </span>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-14 h-14 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
+            <div class="svc-card">
+                <div class="svc-icon-box svc-icon-purple">
                     <i class="fi fi-rs-rocket-lunch"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Landing Page Konversi</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                <h3 class="svc-card-title">Landing Page Konversi</h3>
+                <p class="svc-card-text">
                     Halaman promosi produk dan jasa berkecepatan tinggi dengan copywriting persuasif dan integrasi tombol WhatsApp checkout langsung.
                 </p>
-                <div class="text-xs font-semibold text-indigo-600 flex items-center gap-1">
-                    Cocok untuk: Iklan Meta/Google Ads, Event <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                <div>
+                    <span class="svc-card-badge">
+                        Cocok untuk: Iklan Meta/Google Ads, Event <i class="fi fi-rs-arrow-right" style="font-size: 10px;"></i>
+                    </span>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+            <div class="svc-card">
+                <div class="svc-icon-box svc-icon-emerald">
                     <i class="fi fi-rs-laptop-code"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Web App & Sistem Info</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                    Sistem berbasis web kustom: SIAKAD akademik sekolah, aplikasi kasir (POS), sistem inventaris barang, dan absensi digital.
+                <h3 class="svc-card-title">Web App & Sistem Info</h3>
+                <p class="svc-card-text">
+                    Sistem aplikasi web kustom: SIAKAD akademik sekolah, aplikasi kasir (POS), sistem inventaris barang, dan absensi digital terintegrasi.
                 </p>
-                <div class="text-xs font-semibold text-emerald-600 flex items-center gap-1">
-                    Cocok untuk: Sekolah, Klinik, Toko <i class="fi fi-rs-arrow-right text-[10px]"></i>
+                <div>
+                    <span class="svc-card-badge">
+                        Cocok untuk: Sekolah, Klinik, Toko <i class="fi fi-rs-arrow-right" style="font-size: 10px;"></i>
+                    </span>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="400">
-                <div class="w-14 h-14 rounded-xl bg-amber-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
+            <div class="svc-card">
+                <div class="svc-icon-box svc-icon-amber">
                     <i class="fi fi-rs-settings"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Optimasi & Redesign</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                    Peremajaan website lama agar lebih modern, perbaikan bug, percepatan load time (PageSpeed), dan optimasi SEO On-Page mendalam.
+                <h3 class="svc-card-title">Optimasi & Redesign</h3>
+                <p class="svc-card-text">
+                    Peremajaan website lama agar lebih modern, perbaikan bug kode, percepatan load time (PageSpeed 90+), dan optimasi SEO On-Page mendalam.
                 </p>
-                <div class="text-xs font-semibold text-amber-600 flex items-center gap-1">
-                    Cocok untuk: Pemilik Website Lama <i class="fi fi-rs-arrow-right text-[10px]"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- Keunggulan (Why Us) -->
-        <div class="bg-gradient-to-r from-gray-900 to-slate-900 text-white rounded-3xl p-8 md:p-12 mb-16 shadow-2xl" data-aos="fade-up">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
-                    <span class="text-blue-400 font-bold uppercase text-xs tracking-wider">Mengapa Memilih Parhan Abdillah?</span>
-                    <h3 class="text-2xl md:text-4xl font-extrabold mt-2 mb-4 leading-tight">
-                        Kualitas Kode Terbaik, Tampilan Elegan & SEO Maksimal
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-                        Setiap website yang dibangun dirancang dengan arsitektur standar industri, bebas bloatware, dan telah lulus uji responsif mobile di berbagai ukuran layar.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $profile?->social_wa ?? '6280000000000') }}?text=Halo%20Parhan,%20saya%20tertarik%20konsultasi%20jasa%20pembuatan%20website" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-600/30 hover:bg-blue-500 transition-all">
-                            <i class="fi fi-brands-whatsapp text-lg"></i> Konsultasi Jasa Website Gratis
-                        </a>
-                        <a href="/project" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 text-white font-bold text-sm border border-white/20 hover:bg-white/20 transition-all">
-                            Lihat Portofolio Proyek <i class="fi fi-rs-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
-                        <div class="text-blue-400 text-2xl font-black mb-1">100%</div>
-                        <div class="font-bold text-sm text-white mb-1">Mobile Responsive</div>
-                        <div class="text-xs text-gray-400">Tampilan sempurna di HP, tablet, maupun laptop.</div>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
-                        <div class="text-emerald-400 text-2xl font-black mb-1">Fast</div>
-                        <div class="font-bold text-sm text-white mb-1">Ultra Cepat</div>
-                        <div class="text-xs text-gray-400">Loading kencang tanpa lemot, ramah kuota pengguna.</div>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
-                        <div class="text-amber-400 text-2xl font-black mb-1">SEO</div>
-                        <div class="font-bold text-sm text-white mb-1">Google & AI Ready</div>
-                        <div class="text-xs text-gray-400">Metadata & schema lengkap agar cepat terindeks mesin pencari.</div>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-sm">
-                        <div class="text-indigo-400 text-2xl font-black mb-1">Support</div>
-                        <div class="font-bold text-sm text-white mb-1">Bimbingan & Garansi</div>
-                        <div class="text-xs text-gray-400">Bantuan setup domain, hosting, dan panduan penggunaan.</div>
-                    </div>
+                    <span class="svc-card-badge">
+                        Cocok untuk: Pemilik Website Lama <i class="fi fi-rs-arrow-right" style="font-size: 10px;"></i>
+                    </span>
                 </div>
             </div>
         </div>
 
-        <!-- FAQ Section (Generative Engine Optimization Anchor) -->
-        <div class="max-w-4xl mx-auto" data-aos="fade-up">
-            <div class="text-center mb-10">
-                <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">FAQ Layanan</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">Pertanyaan Seputar Jasa Website</h3>
+        <!-- Keunggulan (Why Us) Banner -->
+        <div class="svc-banner">
+            <div>
+                <span class="svc-banner-tag">// Mengapa Memilih Parhan Abdillah?</span>
+                <h3 class="svc-banner-h3">
+                    Kualitas Kode Terbaik, Desain Eksklusif & SEO Maksimal
+                </h3>
+                <p class="svc-banner-p">
+                    Setiap website dirancang dengan arsitektur rapi standar industri, bebas bloatware, dan telah lulus uji responsif mobile di berbagai ukuran perangkat.
+                </p>
+                <div class="svc-btn-group">
+                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $profile?->social_wa ?? '6280000000000') }}?text=Halo%20Parhan,%20saya%20tertarik%20konsultasi%20jasa%20pembuatan%20website" target="_blank" class="svc-btn-wa">
+                        <i class="fi fi-brands-whatsapp"></i> Konsultasi Jasa Website Gratis
+                    </a>
+                    <a href="/project" class="svc-btn-portfolio">
+                        Lihat Portofolio Proyek <i class="fi fi-rs-arrow-right" style="font-size: 10px;"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="space-y-4">
-                <details class="group bg-gray-50 border border-gray-200 rounded-xl p-5 open:bg-blue-50/40 open:border-blue-200 transition-colors">
-                    <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
-                        <span>Berapa lama estimasi waktu pembuatan website?</span>
-                        <span class="transition group-open:rotate-180 text-blue-600"><i class="fi fi-rs-angle-small-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                        Untuk landing page biasanya membutuhkan waktu 2-4 hari kerja. Website company profile sekitar 5-10 hari kerja. Sementara sistem informasi atau web app kustom disesuaikan dengan kompleksitas modul (rata-rata 2-3 minggu).
-                    </p>
-                </details>
-
-                <details class="group bg-gray-50 border border-gray-200 rounded-xl p-5 open:bg-blue-50/40 open:border-blue-200 transition-colors">
-                    <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
-                        <span>Apakah website yang dibuat sudah SEO friendly dan muncul di Google?</span>
-                        <summary-icon class="transition group-open:rotate-180 text-blue-600"><i class="fi fi-rs-angle-small-down"></i></summary-icon>
-                    </summary>
-                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                        Tentu! Seluruh website kami dilengkapi dengan struktur OpenGraph, meta tags komprehensif, Google sitemap.xml, dan JSON-LD schema (Schema.org) sehingga mudah dikenali oleh mesin pencari Google dan bot AI.
-                    </p>
-                </details>
-
-                <details class="group bg-gray-50 border border-gray-200 rounded-xl p-5 open:bg-blue-50/40 open:border-blue-200 transition-colors">
-                    <summary class="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
-                        <span>Teknologi apa saja yang digunakan?</span>
-                        <summary-icon class="transition group-open:rotate-180 text-blue-600"><i class="fi fi-rs-angle-small-down"></i></summary-icon>
-                    </summary>
-                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                        Kami menggunakan teknologi modern seperti PHP (Laravel), Tailwind CSS, JavaScript murni/Vue, MySQL, serta integrasi RESTful API untuk keandalan performa maksimal.
-                    </p>
-                </details>
+            <div class="svc-stats-grid">
+                <div class="svc-stat-box">
+                    <div class="svc-stat-val" style="color: #60a5fa;">100%</div>
+                    <div class="svc-stat-lbl">Mobile Responsive</div>
+                    <div class="svc-stat-sub">Tampilan sempurna di HP, tablet, maupun laptop.</div>
+                </div>
+                <div class="svc-stat-box">
+                    <div class="svc-stat-val" style="color: #34d399;">Fast</div>
+                    <div class="svc-stat-lbl">Ultra Cepat</div>
+                    <div class="svc-stat-sub">Loading kencang tanpa lemot, ramah kuota pengguna.</div>
+                </div>
+                <div class="svc-stat-box">
+                    <div class="svc-stat-val" style="color: #fbbf24;">SEO</div>
+                    <div class="svc-stat-lbl">Google & AI Ready</div>
+                    <div class="svc-stat-sub">Metadata & schema lengkap agar cepat terindeks mesin pencari.</div>
+                </div>
+                <div class="svc-stat-box">
+                    <div class="svc-stat-val" style="color: #818cf8;">Support</div>
+                    <div class="svc-stat-lbl">Bimbingan & Garansi</div>
+                    <div class="svc-stat-sub">Bantuan setup domain, hosting, dan panduan penggunaan.</div>
+                </div>
             </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="svc-faq-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span class="svc-badge">FAQ Layanan</span>
+                <h3 style="font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-top: 0.5rem;">Pertanyaan Seputar Jasa Website</h3>
+            </div>
+
+            <details class="svc-faq-item">
+                <summary class="svc-faq-q">
+                    <span>Berapa lama estimasi waktu pembuatan website?</span>
+                    <i class="fi fi-rs-angle-small-down" style="color: #2563eb;"></i>
+                </summary>
+                <div class="svc-faq-a">
+                    Untuk landing page biasanya membutuhkan waktu 2-4 hari kerja. Website company profile sekitar 5-10 hari kerja. Sementara sistem informasi atau web app kustom disesuaikan dengan kompleksitas modul (rata-rata 2-3 minggu).
+                </div>
+            </details>
+
+            <details class="svc-faq-item">
+                <summary class="svc-faq-q">
+                    <span>Apakah website yang dibuat sudah SEO friendly dan muncul di Google?</span>
+                    <i class="fi fi-rs-angle-small-down" style="color: #2563eb;"></i>
+                </summary>
+                <div class="svc-faq-a">
+                    Tentu! Seluruh website kami dilengkapi dengan struktur OpenGraph, meta tags komprehensif, Google sitemap.xml, dan JSON-LD schema (Schema.org) sehingga mudah dikenali oleh mesin pencari Google dan bot AI.
+                </div>
+            </details>
+
+            <details class="svc-faq-item">
+                <summary class="svc-faq-q">
+                    <span>Teknologi apa saja yang digunakan?</span>
+                    <i class="fi fi-rs-angle-small-down" style="color: #2563eb;"></i>
+                </summary>
+                <div class="svc-faq-a">
+                    Kami menggunakan teknologi modern seperti PHP (Laravel), Tailwind CSS, JavaScript murni/Vue, MySQL, serta integrasi RESTful API untuk keandalan performa maksimal.
+                </div>
+            </details>
         </div>
     </div>
 </section>

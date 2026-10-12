@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Certificates\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -12,7 +13,7 @@ class CertificateForm
     {
         return $schema
             ->components([
-                \Filament\Forms\Components\Select::make('type')
+                Select::make('type')
                     ->options([
                         'Certificate' => 'Certificate',
                         'SK' => 'SK Pekerjaan',

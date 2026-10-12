@@ -487,13 +487,13 @@
         </div>
         
         <div class="lightbox-content" onclick="closeLightbox()">
-            <img id="lightboxImage" src="" alt="" onclick="event.stopPropagation()">
+            <img id="lightboxImage" src="" alt="" onclick="event.stopPropagation()" onerror="this.onerror=null; this.src='{{ asset('img/presensi.png') }}';">
             <div class="lightbox-caption" id="lightboxCaption"></div>
         </div>
         
         <div class="lightbox-thumbnails">
             <div class="thumbnail-item active">
-                <img id="lightboxThumb" src="" alt="">
+                <img id="lightboxThumb" src="" alt="" onerror="this.onerror=null; this.src='{{ asset('img/presensi.png') }}';">
             </div>
         </div>
     </div>

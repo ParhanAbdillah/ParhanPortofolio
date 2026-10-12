@@ -49,6 +49,6 @@ class Project extends Model
             $cleanPath = substr($cleanPath, 8);
         }
 
-        return asset('storage/'.$cleanPath);
+        return url('media/'.$cleanPath);
     }
 }

@@ -3,8 +3,12 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 
 class ProjectForm
@@ -13,7 +17,7 @@ class ProjectForm
     {
         return $schema
             ->components([
-                \Filament\Schemas\Components\Section::make('Main Information')
+                Section::make('Main Information')
                     ->description('Primary details and preview image of the project.')
                     ->schema([
                         TextInput::make('title')
@@ -26,11 +30,11 @@ class ProjectForm
                             ->columnSpanFull(),
                     ])->columns(1),
 
-                \Filament\Schemas\Components\Section::make('Project Metadata')
+                Section::make('Project Metadata')
                     ->description('Status, classification, and tech stack details.')
                     ->schema([
-                        \Filament\Schemas\Components\Grid::make(2)->schema([
-                            \Filament\Forms\Components\Select::make('status')
+                        Grid::make(2)->schema([
+                            Select::make('status')
                                 ->options([
                                     'Active' => 'Active',
                                     'In Progress' => 'In Progress',
@@ -39,7 +43,7 @@ class ProjectForm
                                 ])
                                 ->default('Active')
                                 ->required(),
-                            \Filament\Forms\Components\Select::make('access')
+                            Select::make('access')
                                 ->options([
                                     'Private Repo' => 'Private Repo',
                                     'Public Repo' => 'Public Repo',
@@ -55,7 +59,7 @@ class ProjectForm
                                 ->numeric()
                                 ->required(),
                         ]),
-                        \Filament\Forms\Components\TagsInput::make('tech_stack')
+                        TagsInput::make('tech_stack')
                             ->placeholder('New tech stack')
                             ->splitKeys(['Tab', ' ', ','])
                             ->columnSpanFull()

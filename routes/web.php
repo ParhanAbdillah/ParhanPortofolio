@@ -63,19 +63,43 @@ Route::post('/guestbook', function (Request $request) {
     return redirect('/guestbook')->with('success', 'Pesan berhasil dikirim!');
 });
 
-// Fallback image & public storage route (ensures 100% reliability across all web servers & symlink states)
-Route::get('/storage/{path}', function (string $path) {
-    $filePath = storage_path('app/public/'.$path);
-    if (! file_exists($filePath)) {
+// Dedicated Media & Storage Serving (Bypasses symlink/junction issues on Windows/Laragon/Apache)
+$serveFileHandler = function (string $path) {
+    $candidates = [
+        storage_path('app/public/'.$path),
+        public_path('storage/'.$path),
+        storage_path('app/'.$path),
+    ];
+
+    $foundPath = null;
+    foreach ($candidates as $candidate) {
+        if (file_exists($candidate) && ! is_dir($candidate)) {
+            $foundPath = $candidate;
+            break;
+        }
+    }
+
+    if (! $foundPath) {
+        $placeholder = public_path('img/presensi.png');
+        if (file_exists($placeholder)) {
+            return response()->file($placeholder, [
+                'Content-Type' => 'image/png',
+                'Cache-Control' => 'no-cache',
+            ]);
+        }
         abort(404);
     }
-    $mimeType = mime_content_type($filePath) ?: 'application/octet-stream';
 
-    return response()->file($filePath, [
+    $mimeType = mime_content_type($foundPath) ?: 'application/octet-stream';
+
+    return response()->file($foundPath, [
         'Content-Type' => $mimeType,
         'Cache-Control' => 'public, max-age=604800, immutable',
     ]);
-})->where('path', '.*');
+};
+
+Route::get('/media/{path}', $serveFileHandler)->where('path', '.*');
+Route::get('/storage/{path}', $serveFileHandler)->where('path', '.*');
 
 // SEO / GEO Sitemap for Search Engines & AI Crawlers
 Route::get('/sitemap.xml', function () {

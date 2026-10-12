@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Skills\Schemas;
 
-use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -15,7 +15,7 @@ class SkillForm
                 TextInput::make('name')
                     ->required()
                     ->helperText('Name of the skill (e.g. Python, HTML, Cisco). Icon will be generated automatically.'),
-                \Filament\Forms\Components\Select::make('category')
+                Select::make('category')
                     ->required()
                     ->options([
                         'Web Development' => 'Web Development',

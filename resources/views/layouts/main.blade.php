@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')</title>
+    <title>@yield('title', 'Parhan Portofolio - Muhamad Parhan Abdillah | Web Developer & Jasa Website Profesional')</title>
     
     <!-- Primary SEO Meta Tags -->
-    <meta name="title" content="@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')" />
-    <meta name="description" content="@yield('meta_description', 'Muhamad Parhan Abdillah - Full-Stack Web Developer & Jasa Pembuatan Website Profesional di Indonesia. Melayani pembuatan landing page, company profile, aplikasi web, sistem informasi sekolah & toko online berkualitas tinggi, cepat, responsif, dan SEO friendly.')" />
-    <meta name="keywords" content="parhan portofolio, parhan abdillah, muhamad parhan, jasa website, jasa pembuatan website, jasa bikin website, jasa web developer, jasa website murah profesional, web developer indonesia, fullstack developer, laravel developer, jasa landing page, jasa web company profile, pembuatan web sekolah, aplikasi web" />
+    <meta name="title" content="@yield('title', 'Parhan Portofolio - Muhamad Parhan Abdillah | Web Developer & Jasa Website Profesional')" />
+    <meta name="description" content="@yield('meta_description', 'Parhan Portofolio: Website resmi Muhamad Parhan Abdillah, Full-Stack Web Developer & Jasa Pembuatan Website Profesional. Melayani pembuatan landing page, company profile bisnis, sistem informasi akademik (SIAKAD), aplikasi kasir, dan optimasi web SEO.')" />
+    <meta name="keywords" content="parhan portofolio, parhan abdillah, muhamad parhan abdillah, jasa website, jasa pembuatan website, jasa bikin website, jasa web developer, web developer indonesia, laravel developer, jasa landing page, jasa web company profile, pembuatan web sekolah, siakad sekolah, portofolio web developer" />
     <meta name="author" content="Muhamad Parhan Abdillah" />
     <meta name="publisher" content="Muhamad Parhan Abdillah" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -21,21 +21,21 @@
     <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:title" content="@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')" />
-    <meta property="og:description" content="@yield('meta_description', 'Penyedia Jasa Pembuatan Website Profesional & Portofolio Web Developer: Landing Page, Company Profile, Sistem Informasi & Web App.')" />
+    <meta property="og:title" content="@yield('title', 'Parhan Portofolio - Muhamad Parhan Abdillah | Web Developer & Jasa Website Profesional')" />
+    <meta property="og:description" content="@yield('meta_description', 'Parhan Portofolio: Website resmi Muhamad Parhan Abdillah, Full-Stack Web Developer & Jasa Pembuatan Website Profesional.')" />
     <meta property="og:image" content="{{ asset('images/foto_parhan.jpg') }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Muhamad Parhan Abdillah - Web Developer & Jasa Pembuatan Website" />
-    <meta property="og:site_name" content="Parhan Abdillah" />
+    <meta property="og:image:alt" content="Parhan Portofolio - Muhamad Parhan Abdillah Web Developer" />
+    <meta property="og:site_name" content="Parhan Portofolio" />
     <meta property="og:locale" content="id_ID" />
     <meta property="og:locale:alternate" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="{{ url()->current() }}" />
-    <meta name="twitter:title" content="@yield('title', 'Parhan Abdillah - Portofolio Web Developer & Jasa Pembuatan Website')" />
-    <meta name="twitter:description" content="@yield('meta_description', 'Penyedia Jasa Pembuatan Website Profesional & Portofolio Web Developer: Landing Page, Company Profile, Sistem Informasi & Web App.')" />
+    <meta name="twitter:title" content="@yield('title', 'Parhan Portofolio - Muhamad Parhan Abdillah | Web Developer & Jasa Website Profesional')" />
+    <meta name="twitter:description" content="@yield('meta_description', 'Parhan Portofolio: Website resmi Muhamad Parhan Abdillah, Full-Stack Web Developer & Jasa Pembuatan Website Profesional.')" />
     <meta name="twitter:image" content="{{ asset('images/foto_parhan.jpg') }}" />
 
     <!-- GEO / Generative Engine Optimization JSON-LD Schema for Google AI Overviews & AI Search -->
@@ -70,7 +70,8 @@
           '@type' => 'WebSite',
           '@id' => url('/') . '#website',
           'url' => url('/'),
-          'name' => 'Parhan Abdillah - Portofolio & Jasa Pembuatan Website',
+          'name' => 'Parhan Portofolio - Web Developer & Jasa Website',
+          'alternateName' => ['Parhan Portofolio', 'Portofolio Parhan', 'Parhan Abdillah Portofolio', 'Farhan Portfolio'],
           'description' => 'Website resmi portofolio Muhamad Parhan Abdillah dan Layanan Jasa Pembuatan Website Profesional.',
           'publisher' => [
             '@id' => url('/') . '#person'
@@ -80,7 +81,8 @@
         [
           '@type' => 'ProfessionalService',
           '@id' => url('/') . '#service',
-          'name' => 'Jasa Pembuatan Website Parhan Abdillah',
+          'name' => 'Parhan Portofolio - Jasa Pembuatan Website Profesional',
+          'alternateName' => ['Jasa Website Parhan Abdillah', 'Jasa Website Laravel & Modern Stack'],
           'url' => url('/'),
           'image' => asset('images/foto_parhan.jpg'),
           'description' => 'Layanan jasa pembuatan website profesional, cepat, responsif dan SEO friendly. Melayani website company profile, landing page, sistem informasi sekolah, toko online, dan aplikasi web custom.',
@@ -497,6 +499,22 @@
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     const targetUrl = this.getAttribute('href');
+                    if (!targetUrl) return;
+
+                    // Handle internal page anchor like Layanan & Jasa (#Services)
+                    if (targetUrl.includes('#Services')) {
+                        const isHome = window.location.pathname === '/' || 
+                                       window.location.pathname.endsWith('/public') || 
+                                       window.location.pathname.endsWith('/public/');
+                        if (isHome) {
+                            e.preventDefault();
+                            const svcSection = document.getElementById('Services');
+                            if (svcSection) {
+                                svcSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                            return;
+                        }
+                    }
                     
                     // Don't animate if clicking current page or external link
                     if (targetUrl === window.location.pathname || targetUrl.startsWith('http')) return;
